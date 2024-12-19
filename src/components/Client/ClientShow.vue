@@ -1,5 +1,18 @@
 <template>
-    <h1>Hi</h1>
+    <div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<h4 class="card-title">Nav Pills Without Border (Vertical Tabs)</h4>
+								</div>
+								<div class="card-body">
+									<div class="row">
+										<div class="col-12">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 </template>
 
 <script>

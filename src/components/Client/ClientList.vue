@@ -49,13 +49,25 @@
                           <td>@mdo</td>
                           <td>Riyadh</td>
                           <td>
-                            <div class="card-action">
-                              <button class="btn btn-success">Update</button>
-                              |
-                              <button class="btn btn-danger">Delete</button>
-                              |
-                              <button type="button" class="btn btn-outline-secondary">show</button>
-                            </div>
+                            
+                              <router-link>
+                                <span class="material-symbols-outlined">
+                                  update
+                                </span>
+                              </router-link>
+
+                              <router-link>
+                                <span class="material-symbols-outlined">
+                                  delete
+                                </span>
+                              </router-link>
+
+                              <router-link>
+                                <span class="material-symbols-outlined">
+                                  visibility
+                                </span>
+                              </router-link>
+                            
                           </td>
                         </tr>
                       </tbody>
