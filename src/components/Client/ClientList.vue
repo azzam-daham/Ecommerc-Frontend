@@ -1,5 +1,5 @@
 <template>
-    <!-- <div class="container">
+    <div class="container">
         <table class="table">
             <thead>
                 <tr>
@@ -18,13 +18,32 @@
                 <td>{{client.email}}</td>
                 <td>{{client.mobile}}</td>
                 <td>{{ client.address }}</td>
-                <td><router-link :to="`clients/${client.id}`">show</router-link></td>
+
+                <td>
+                  <router-link :to="`clients/${client.id}`">
+                  <span class="material-symbols-outlined">
+                      visibility|
+                  </span>
+                </router-link>
+
+                <router-link :to="`clients/${client.id}`">
+                  <span class="material-symbols-outlined">
+                      update|
+                  </span>
+                </router-link>
+
+                <router-link :to="`clients/${client.id}`">
+                  <span class="material-symbols-outlined">
+                      delete
+                  </span>
+                </router-link>
+              </td>
                 </tr>
             </tbody>
         </table>
-    </div> -->
+    </div>
 
-    <div class="container">
+    <!-- <div class="container">
                 <div class="card">
                   <div class="card-header">
                     <div class="card-title">Clients list</div>
@@ -43,38 +62,18 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>1</td>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                          <td>Riyadh</td>
-                          <td>
-                            
-                              <router-link>
-                                <span class="material-symbols-outlined">
-                                  update
-                                </span>
-                              </router-link>
-
-                              <router-link>
-                                <span class="material-symbols-outlined">
-                                  delete
-                                </span>
-                              </router-link>
-
-                              <router-link>
-                                <span class="material-symbols-outlined">
-                                  visibility
-                                </span>
-                              </router-link>
-                            
-                          </td>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               
 
@@ -97,6 +96,7 @@ export default{
         async allClients(){
             const clients = await axios.get('http://127.0.0.1:8000/api/clients')
             this.clients = clients.data.data
+            // console.log(clients.data.data);
         }
     }
 }
